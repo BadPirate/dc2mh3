@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DrunkCircle Farewell</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: #f9f9f9;
+      }
+
+      body {
+        background-image: url("sorry.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 10% 12%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.05) 0%,
+          rgba(0, 0, 0, 0.35) 80%
+        );
+      }
+
+      .message {
+        max-width: 28rem;
+        background: rgba(7, 7, 7, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 1.75rem 2rem;
+        border-radius: 0.75rem;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .message p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 1.05rem;
+        letter-spacing: 0.01em;
+      }
+
+      @media (max-width: 600px) {
+        .overlay {
+          padding: 0 8% 18%;
+        }
+
+        .message {
+          max-width: none;
+          width: 100%;
+          padding: 1.5rem;
+        }
+
+        .message p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="message">
+        <p>
+          It was a great r*n, but DrunkCircle is done, for SVH3, Agnews and
+          FHAC-U, please visit the new Multi-Hash home at <a href="https://svh3.com">svh3.com</a> or 
+          <a href="https://fhacu.com">fhacu.com</a> to find the latest trails and tales. Oh, and don't forget to 
+          update your device <a href="webcal://svh3.com/calendar.ics">calendars</a>.<br>
+          <br>
+          On-out, <a href="mailto:ni@fhacu.com">Nothing Interesting</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
