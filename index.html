@@ -13,7 +13,7 @@
       body {
         height: 100%;
         margin: 0;
-        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-family: "Segoe UI", Arial, sans-serif;
         color: #f9f9f9;
       }
 
@@ -25,7 +25,7 @@
         background-attachment: fixed;
       }
 
-      .overlay {
+      .hero {
         height: 100%;
         width: 100%;
         display: flex;
@@ -39,53 +39,119 @@
         );
       }
 
-      .message {
-        max-width: 28rem;
-        background: rgba(7, 7, 7, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 1.75rem 2rem;
-        border-radius: 0.75rem;
-        backdrop-filter: blur(4px);
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      .hero-image {
+        display: none;
       }
 
-      .message p {
-        margin: 0;
+      .panel {
+        max-width: 30rem;
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1.5rem 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
+          "Segoe UI", Arial, sans-serif;
+        color: #f5f5f5;
+      }
+
+      .panel p {
+        margin: 0 0 1.25rem;
         line-height: 1.6;
         font-size: 1.05rem;
         letter-spacing: 0.01em;
       }
 
-      @media (max-width: 600px) {
-        .overlay {
-          padding: 0 8% 18%;
+      .panel p:last-child {
+        margin-bottom: 0;
+      }
+
+      .panel small {
+        color: #b3b3b3;
+      }
+
+      .panel a {
+        color: #ffc857;
+        text-decoration: none;
+      }
+
+      .panel a:hover,
+      .panel a:active {
+        color: #ff9b2f;
+        text-decoration: underline;
+      }
+
+      .panel a:visited {
+        color: #d88a2f;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-image: none;
+          background-color: #050505;
         }
 
-        .message {
-          max-width: none;
+        .hero {
+          min-height: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 2.5rem 1.5rem 3.5rem;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
+          gap: 1.75rem;
+        }
+
+        .hero-image {
+          display: block;
           width: 100%;
-          padding: 1.5rem;
+          max-width: 32rem;
+          height: auto;
+          border-radius: 0.75rem;
+          box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
         }
 
-        .message p {
+        .panel {
+          width: 100%;
+          max-width: 32rem;
+          padding: 1.5rem;
+          background: #000000;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .panel p {
           font-size: 1rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="overlay">
-      <div class="message">
+    <main class="hero">
+      <img
+        src="sorry.png"
+        alt="We apologize for the inconvenience over a mountain sunset."
+        class="hero-image"
+      />
+      <section class="panel">
         <p>
           It was a great r*n, but DrunkCircle is done, for SVH3, Agnews and
-          FHAC-U, please visit the new Multi-Hash home at <a href="https://svh3.com">svh3.com</a> or 
-          <a href="https://fhacu.com">fhacu.com</a> to find the latest trails and tales. Oh, and don't forget to 
-          update your device <a href="webcal://svh3.com/calendar.ics">calendars</a>.<br>
-          <br>
-          On-out, <a href="mailto:ni@fhacu.com">Nothing Interesting</a>.
+          FHAC-U, please visit the new Multi-Hash home at
+          <a href="https://svh3.com">svh3.com</a> or
+          <a href="https://fhacu.com">fhacu.com</a> to find the latest trails
+          and tales. Oh, and don't forget to update your device
+          <a href="webcal://svh3.com/calendar.ics">calendars</a>.
         </p>
-      </div>
-    </div>
+        <p>
+          <small
+            >On-out,
+            <a href="mailto:ni@fhacu.com">Nothing Interesting</a>.</small
+          >
+        </p>
+      </section>
+    </main>
   </body>
 </html>
 
